@@ -1,0 +1,155 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+
+:root {
+  --bg-color: #F5F5F5;
+  --primary-color: #228be6;
+  --color: #000;
+  --color-hover: rgb(110, 110, 110);
+  --background-footer: #333;
+  --shadow-navbar: rgba(100, 100, 100, 0.275);
+}
+
+.darkMode {
+  --bg-color: #212529;
+  --primary-color: #228be6;
+  --color: #fff;
+  --color-hover: rgb(219, 219, 219);
+  --background-footer: #F5F5F5;
+  --shadow-navbar: rgba(0, 0, 0, 0.275);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F5F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+html {
+  width: 100vw;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  background-color: var(--bg-color);
+  color: var(--color);
+  font-family: 'Inter', sans-serif;
+}
+
+/*-Nav-*/
+nav {
+width: 100%; height: 6rem;
+padding: 1rem 12vw;
+background-color: var(--bg-color);
+position: sticky;
+top: 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0 5px 15px var(--shadow-navbar);
+z-index: 1;
+}
+  /* Logo */
+  .logo-link {
+    text-decoration: none;
+    color: var(--color);
+  }
+  nav .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav .logo svg {
+    width: 2.5rem;
+    cursor: pointer;
+  }
+  /* nav .logo p {
+    font-size: 1.5em; font-weight: 500;
+    padding-left: 1em;
+    cursor: pointer;
+  } */
+  nav .logo::after {
+    content: "Presentazione esame";
+    margin-left: .5em;
+    font-size: 1.5em; font-weight: 500;
+  }
+
+  /* Menu */
+  nav .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav .menu .menu-items {
+    padding: 0 1em;
+  }
+  nav .menu .menu-items a {
+    text-decoration: none;
+    color: var(--color);
+    transition: color 150ms ease-in-out;
+  }
+  nav .menu .menu-items a:hover {
+    color: var(--color-hover);
+  }
+  /* Dark-mode toggle */
+  nav .menu .menu-items img {
+    width: 20px;
+        cursor: pointer;
+  }
+  nav .menu .menu-items .dark {
+    display: none;
+  }
+
+
+/* Header */
+header {
+  padding: 0 12vw;
+  position: relative;
+  height: calc(100vh - 6rem);
+  overflow: hidden;
+}
+  /* Header text */
+  header h1 {
+    margin: 8rem 0 0 0em;
+    font-size: 5vw;
+    font-family: 'Roboto Slab', serif;
+  }
+  header h1 span {
+    display: block;
+  }
+  /* header h1 span.strinco-s-hub {
+    font-weight: 900;
+  } */
+
+
+  /* Header background */
+  header .background-image {
+    position: absolute;
+    top: 5em;
+    right: -5em;
+    z-index: -1;
+  }
+  header .background-image img{
+    width: 50em;
+    border-radius: 50%;
+    transform: rotate(-30deg);
+    filter: opacity(60%);
+  }
+  
